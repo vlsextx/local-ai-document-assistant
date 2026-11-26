@@ -20,5 +20,20 @@
       "PowerShell(git push * --force*)",
       "PowerShell(git push * -f*)"
     ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "& \"$env:CLAUDE_PROJECT_DIR/.claude/hooks/confirm-dangerous.ps1\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
   }
 }
