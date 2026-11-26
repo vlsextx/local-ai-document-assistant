@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "ask": [
+      "Bash(rm -rf *)",
+      "Bash(rm -fr *)",
+      "Bash(*drop *)",
+      "Bash(*DROP TABLE*)",
+      "Bash(*DROP DATABASE*)",
+      "Bash(git push --force*)",
+      "Bash(git push -f*)",
+      "Bash(git push * --force*)",
+      "Bash(git push * -f*)",
+      "PowerShell(rm -rf *)",
+      "PowerShell(rm -fr *)",
+      "PowerShell(*drop *)",
+      "PowerShell(*DROP TABLE*)",
+      "PowerShell(*DROP DATABASE*)",
+      "PowerShell(git push --force*)",
+      "PowerShell(git push -f*)",
+      "PowerShell(git push * --force*)",
+      "PowerShell(git push * -f*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|PowerShell",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "& \"$env:CLAUDE_PROJECT_DIR/.claude/hooks/confirm-dangerous.ps1\"",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
