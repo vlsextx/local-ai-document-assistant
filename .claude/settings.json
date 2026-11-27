@@ -18,25 +18,7 @@
       "PowerShell(git push --force*)",
       "PowerShell(git push -f*)",
       "PowerShell(git push * --force*)",
-      "PowerShell(git push * -f*)",
-      "Read(~/.ssh/**)",
-      "Read(~/.config/gh/**)",
-      "Bash(cat *ssh*)",
-      "Bash(type *ssh*)",
-      "Bash(cat *ssh*)",
-      "Bash(type *ssh*)",
-      "Bash(gh auth token*)",
-      "Bash(gh repo delete*)",
-      "Bash(gh secret *)",
-      "Bash(gh ssh-key *)",
-      "PowerShell(cat *ssh*)",
-      "PowerShell(type *ssh*)",
-      "PowerShell(cat *ssh*)",
-      "PowerShell(type *ssh*)",
-      "PowerShell(gh auth token*)",
-      "PowerShell(gh repo delete*)",
-      "PowerShell(gh secret *)",
-      "PowerShell(gh ssh-key *)"
+      "PowerShell(git push * -f*)"
     ]
   },
   "hooks": {
