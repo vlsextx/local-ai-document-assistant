@@ -18,7 +18,9 @@
       "PowerShell(git push --force*)",
       "PowerShell(git push -f*)",
       "PowerShell(git push * --force*)",
-      "PowerShell(git push * -f*)",
+      "PowerShell(git push * -f*)"
+    ],
+    "deny": [
       "Read(~/.ssh/**)",
       "Read(~/.config/gh/**)",
       "Bash(cat *ssh*)",
